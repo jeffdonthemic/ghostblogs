@@ -1,0 +1,58 @@
+<header class="sidebar-header">
+
+    <div class="first">
+        <div class="header-content">
+            <a class="blog-title" href="{{@blog.url}}" title="{{@blog.title}}">
+                {{@blog.title}}
+                <span class="byline">{{@blog.description}}</span>
+            </a>
+
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-square-o fa-stack-2x"></i>
+              <i class="fa fa-road fa-stack-1x"></i>
+            </span>
+            Days on the road:
+            <script>
+            var startDate = moment("June 15, 2014");
+            var today = moment();
+            document.write(today.diff(startDate, 'days'));
+            </script>
+            <br>
+
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-square-o fa-stack-2x"></i>
+              <i class="fa fa-home fa-stack-1x"></i>
+            </span>
+            Location: <span id="home-location">Loading...</span><br>
+
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-square-o fa-stack-2x"></i>
+              <i class="fa fa-globe fa-stack-1x"></i>
+            </span>
+            <a href="/map">Map of where we've been</a><br/>
+
+        </div>
+    </div>
+
+    <div class="second">
+        <a class="expander" title="Show menu">
+        	<div class="expand"><span class="icon"></span>Menu</div>
+        	<div class="collapse"><span class="icon collapse"></span>Collapse</div>
+        </a>
+        <ul class="main-menu">
+            <li class="menu-item">
+                <a href="{{@blog.url}}">Home</a>
+            </li>
+            <li class="menu-item">
+                <a href="{{@blog.url}}/the-trip">Our Trip</a>
+            </li>            
+            <li class="menu-item">
+                <a href="{{@blog.url}}/the-family">Our Family</a>
+            </li>
+            <li class="menu-item">
+                <a href="{{@blog.url}}/where-to-go">Cool Destination?</a>
+            </li>
+        </ul>
+    </div>
+
+</header>
